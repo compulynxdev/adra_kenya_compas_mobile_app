@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.reports.ReportActivity">
+
+    <include layout="@layout/layout_custom_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_below="@+id/ll_toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/views"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="5dp"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:id="@+id/cv_summary_report">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:id="@+id/v5"
+                            android:background="#2398e5"
+                            />
+                        <ImageView
+                            android:id="@+id/summary_icon"
+                            android:layout_width="90dp"
+                            android:paddingTop="8dp"
+                            android:layout_height="90dp"
+                            android:layout_below="@+id/v5"
+                            android:src="@drawable/ic_summary"
+                            android:layout_centerHorizontal="true"
+                            android:contentDescription="@string/image" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/summary_update"
+                            android:textSize="18sp"
+                            android:textColor="#000"
+                            android:text="@string/SummaryReports"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/summary_icon"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="5dp"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:visibility="gone"
+                    android:id="@+id/cv_vendor_summary_report">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:id="@+id/vv"
+                            android:background="#2398e5"
+                            />
+                        <ImageView
+                            android:id="@+id/v_summary_icon"
+                            android:layout_width="90dp"
+                            android:paddingTop="8dp"
+                            android:layout_height="90dp"
+                            android:layout_below="@+id/vv"
+                            android:src="@drawable/ic_summary"
+                            android:layout_centerHorizontal="true"
+                            android:contentDescription="@string/image" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/v_summary_update"
+                            android:textSize="18sp"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:text="@string/vendor_summary"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/v_summary_icon"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="5dp"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:id="@+id/cv_sales_trans_history">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:id="@+id/v21"
+                            android:background="#2398e5"
+                            />
+                        <ImageView
+                            android:id="@+id/sales_icon"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_below="@+id/v21"
+                            android:paddingTop="8dp"
+                            android:src="@drawable/ic_sales_transaction"
+                            android:layout_centerHorizontal="true"
+                            android:contentDescription="@string/image" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sales_trans_history_report"
+                            android:textSize="18sp"
+                            android:textColor="#000"
+                            android:textAlignment="center"
+                            android:text="@string/SalesTransactionHistory"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/sales_icon"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/cv_void_transaction"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_margin="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <View
+                            android:id="@+id/v99"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:background="#2398e5" />
+
+                        <ImageView
+                            android:id="@+id/void_icon"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:paddingTop="8dp"
+                            android:layout_below="@+id/v99"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_void_report"
+                            android:contentDescription="@string/image" />
+
+                        <TextView
+                            android:id="@+id/void_transaction_report"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/void_icon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/voidReport"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_submitreport"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_margin="5dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <View
+                            android:id="@+id/v7"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:background="#2398e5" />
+
+                        <ImageView
+                            android:id="@+id/submit_icon"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_below="@+id/v7"
+                            android:layout_centerHorizontal="true"
+                            android:contentDescription="@string/image"
+                            android:paddingTop="8dp"
+                            android:src="@drawable/ic_submit_txns" />
+
+                        <TextView
+                            android:id="@+id/submit_update"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/submit_icon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/submitreports"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="5dp"
+                    android:visibility="gone"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:id="@+id/cv_sync_report">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:id="@+id/v15"
+                            android:background="#2398e5"
+                            />
+                        <ImageView
+                            android:id="@+id/sync_icon"
+                            android:layout_width="90dp"
+                            android:paddingTop="8dp"
+                            android:layout_height="90dp"
+                            android:layout_below="@+id/v15"
+                            android:src="@drawable/ic_summary"
+                            android:layout_centerHorizontal="true"
+                            android:contentDescription="@string/image" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sync_update"
+                            android:textSize="18sp"
+                            android:textAlignment="center"
+                            android:textColor="#000"
+                            android:text="@string/SyncReport"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/sync_icon"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="5dp"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:id="@+id/cv_xreports_card">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+
+                            android:id="@+id/v6"
+                            android:background="#2398e5"
+                            />
+                        <ImageView
+                            android:id="@+id/xreports_icon"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_below="@+id/v6"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/ic_xreport"
+                            android:layout_centerHorizontal="true"
+                            android:contentDescription="@string/image" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/title_xreports"
+                            android:textSize="18sp"
+                            android:textColor="#000"
+                            android:text="@string/Xreports"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/xreports_icon"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="5dp"
+                    android:layout_width="170dp"
+                    android:visibility="visible"
+                    android:layout_height="170dp"
+                    android:id="@+id/cv_commodity_report">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:id="@+id/v14"
+                            android:background="#2398e5"
+                            />
+                        <ImageView
+                            android:id="@+id/commodityreport_icon"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_below="@+id/v14"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/ic_daily_commodity"
+                            android:layout_centerHorizontal="true"
+                            android:contentDescription="@string/image" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/commodityreport_title"
+                            android:textSize="18sp"
+                            android:textColor="#000"
+                            android:text="@string/commodity_report"
+                            android:textAlignment="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/commodityreport_icon"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="5dp"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:visibility="visible"
+                    android:id="@+id/cv_salesBasket">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <View
+                            android:id="@+id/v11"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:background="#2398e5" />
+
+                        <ImageView
+                            android:id="@+id/tdetail_icon"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_below="@+id/v11"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/image"
+                            android:src="@drawable/ic_sales_basket" />
+
+                        <TextView
+                            android:id="@+id/tdetail_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tdetail_icon"
+                            android:layout_centerHorizontal="true"
+                            android:textAlignment="center"
+                            android:text="@string/sales"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
